@@ -1,6 +1,7 @@
 import os
 import numpy as np
 
+# Create a class to handle the embeddings
 class Embeddings:
     def __init__(self, client):
         self.client = client
