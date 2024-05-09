@@ -6,4 +6,4 @@
 - Summarize a chosen file
 - Loop through a repository and create embeddings out of the code.
 
-So far using only OpenAI API-calls with davinci-002 for encoding embeddings. 
+So far using only OpenAI API-calls with davinci-002 for encoding embeddings and a test_repository with a small codefile. 
