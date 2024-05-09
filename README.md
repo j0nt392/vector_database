@@ -7,7 +7,7 @@
 - Walk through a repository and create embeddings out of the code using AST. The AST extracts Classes, Func, and Expressions.
 
 Classes:
-VectorDatabase, adds embeddings, searches in the database, as well as saves and loads persistent data. __
+VectorDatabase, adds embeddings, searches in the database, as well as saves and loads persistent data. <br/>
 Embeddings creates the embeddings used both for querying and adding new embeddings using davinci-002. __
 CodeSummarizer uses gpt3.5 to read files and summarize them. 
 Utils contains the AST_parser, it analyzes code and extracts classes functions and expressions. 
