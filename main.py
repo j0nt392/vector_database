@@ -57,7 +57,7 @@ class CLI:
             print("Error: directory is required for 'get_summary'")
             self.parser.print_help()
             return
-        summary = self.summarizer.summarize_file(self.args.directory)
+        summary = self.summarizer.process_directory(self.args.directory)
         print(summary)
 
     def extract_and_embed(self):
@@ -83,6 +83,9 @@ class CLI:
 if __name__ == "__main__":
     cli = CLI()
     
+
+    # Without using classes:
+
     # db = VectorDatabase()
 
     # # Attempt to load existing database

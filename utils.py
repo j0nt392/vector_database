@@ -1,6 +1,7 @@
 import ast
 import os
 
+
 class CodeExtractor:
     def __init__(self, repository_path):
         self.repository_path = repository_path
@@ -28,7 +29,8 @@ class CodeExtractor:
                                     })
                                 elif isinstance(node, ast.Expr) and hasattr(node, 'lineno'):
                                     # Handling top-level expressions
-                                    code_segment = ast.get_source_segment(content, node)
+                                    code_segment = ast.get_source_segment(
+                                        content, node)
                                     code_blocks.append({
                                         'file_path': file_path,
                                         'code_segment': code_segment,
@@ -37,6 +39,6 @@ class CodeExtractor:
                                         'type': type(node).__name__
                                     })
                         except SyntaxError:
-                            print(f"Syntax Error in file: {file_path}")  # Log the error
+                            print(f"Syntax Error in file: {
+                                  file_path}")  # Log the error
         return code_blocks
-
