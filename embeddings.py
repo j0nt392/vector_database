@@ -12,8 +12,8 @@ class Embeddings:
             input=code, 
             encoding_format="float"
         )
-        cut_dim = response.data[0].embedding[:256]
-        return self._normalize_l2(cut_dim)
+        embedding = np.array(response.data[0].embedding[:256]) if response.data else np.zeros(256)
+        return self._normalize_l2(embedding) if np.any(embedding) else np.zeros(256)
 
     def _normalize_l2(self, x):
         x = np.array(x)
