@@ -11,6 +11,8 @@ Classes:
 - Embeddings creates the embeddings used both for querying and adding new embeddings using davinci-002. 
 - CodeSummarizer uses gpt3.5 to read files and summarize them. 
 - Utils contains the AST_parser, it analyzes code and extracts classes functions and expressions. 
-- CLI is the commandline interface which implements all of the above to be used from the terminal. 
+- CLI is the commandline interface which implements all of the above to be used from the terminal.
+
+The ".index and .metadata" files are the persisted vector-indexes for the vector_database. 
 
 So far using only OpenAI API-calls with davinci-002 for encoding embeddings and a test_repository with a small codefile. 
