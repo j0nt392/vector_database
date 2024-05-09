@@ -2,7 +2,7 @@ import ast
 import os
 
 
-class CodeExtractor:
+class AST_parser:
     def __init__(self, repository_path):
         self.repository_path = repository_path
 

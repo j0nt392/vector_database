@@ -7,7 +7,7 @@ import os
 from VectorDatabase import VectorDatabase
 from CodeSummarizer import CodeSummarizer
 from Embeddings import Embeddings
-from utils import CodeExtractor
+from utils import AST_parser
 
 load_dotenv()
 openai_key = os.getenv("OPENAI_API_KEY")
@@ -69,7 +69,7 @@ class CLI:
             print(f"Error: The directory {self.args.directory} does not exist.")
             return
         
-        code_extractor = CodeExtractor(self.args.directory)
+        code_extractor = AST_parser(self.args.directory)
         try:
             code_blocks = code_extractor.extract_code_blocks()
             for i, block in enumerate(code_blocks):
