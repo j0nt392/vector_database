@@ -1,4 +1,4 @@
-# Vector database for querying code-files and structures.
+# AI-codebuddy that helps review, critique and debug my repositories.
 
 2024-05-12
 - Query vectorspace with code or/and queries, receive code and metadata (linenumber, filepath).
