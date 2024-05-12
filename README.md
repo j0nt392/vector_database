@@ -5,7 +5,7 @@
 - Persist the database with pickle
 - Summarize a chosen file
 - Walk through a repository and create embeddings out of the code using AST. The AST extracts Classes, Func, and Expressions.
-- GPT-3.5-instruct for code_review, with choice to implement or reject changes
+- GPT-3.5-instruct for code_review, with choice to implement or reject changes, also commits changes to repository.
 
 Classes:
 - VectorDatabase, adds embeddings, searches in the database, as well as saves and loads persistent data.

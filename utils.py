@@ -40,6 +40,5 @@ class AST_parser:
                                         'type': type(node).__name__
                                     })
                         except SyntaxError:
-                            print(f"Syntax Error in file: {
-                                  file_path}")  # Log the error
+                            print(f"Syntax Error in file: {file_path}")  # Log the error
         return code_blocks

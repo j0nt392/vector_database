@@ -54,4 +54,4 @@ vector_list = [vector_1, vector_2, vector_3]
 print("Vector list:", [vector for vector in vector_list])
 
 for vector in vector_list:
-    print(f"The magnitude of {vector} is {vector.magnitude()}").
+    print(f"The magnitude of {vector} is {vector.magnitude()}")

@@ -7,6 +7,7 @@ from CodeSummarizer import CodeSummarizer
 from Embeddings import Embeddings
 from utils import AST_parser
 from CodeReview import CodeReview
+import git
 
 load_dotenv()
 openai_key = os.getenv("OPENAI_API_KEY")
@@ -20,6 +21,7 @@ class CLI:
         self.embeddings = Embeddings(client)
         self.summarizer = CodeSummarizer(client)
         self.code_reviewer = CodeReview(client)
+        self.Repo = git.Repo('/Users/jonte/kodprojekt/gunnar')
         self.route_command()
 
     def setup_parser(self):
@@ -100,6 +102,15 @@ class CLI:
                 with open(self.args.file, 'w') as f:
                     f.write(new_code)
                 print("Changes implemented successfully.")
+
+                try:
+                    # Commit changes to the repository
+                    self.Repo.git.add(self.args.file)
+                    self.Repo.git.commit(m=f"Optimized code in {self.args.file}")
+                    print("Changes committed to the repository.")
+                except Exception as e:
+                    print(f"Failed to commit changes: {e}")
+
             else:
                 print("No changes implemented.")
 

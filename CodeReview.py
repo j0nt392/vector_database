@@ -29,7 +29,7 @@ class CodeReview:
             response = self.client.completions.create(
                 model="gpt-3.5-turbo-instruct",
                 prompt = prompt,
-                max_tokens=4000,
+                max_tokens=1000,
                 temperature=0.7
             )
             return response.choices[0].text.strip()
