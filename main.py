@@ -2,12 +2,11 @@ import argparse
 from openai import OpenAI
 from dotenv import load_dotenv
 import os
-
-# Import your custom classes
 from VectorDatabase import VectorDatabase
 from CodeSummarizer import CodeSummarizer
 from Embeddings import Embeddings
 from utils import AST_parser
+from CodeReview import CodeReview
 
 load_dotenv()
 openai_key = os.getenv("OPENAI_API_KEY")
@@ -20,12 +19,14 @@ class CLI:
         self.db = VectorDatabase(storage_path='path_to_your_saved_index')  # Modify as needed
         self.embeddings = Embeddings(client)
         self.summarizer = CodeSummarizer(client)
+        self.code_reviewer = CodeReview(client)
         self.route_command()
 
     def setup_parser(self):
         parser = argparse.ArgumentParser(description="CLI for interacting with AI models and codebase information")
-        parser.add_argument("command", help="The command to run", choices=["query_vdb", "get_summary", "extract_and_embed"])
-        parser.add_argument("directory", help="Directory to process for extracting and embedding code blocks", nargs="?")
+        parser.add_argument("command", help="The command to run", choices=["query_vdb", "get_summary", "extract_and_embed", "code_review"])
+        parser.add_argument("--dir", help="Directory to process for extracting and embedding code blocks")
+        parser.add_argument("--file", help="File to review code")
         parser.add_argument("--query", help="Query string to search for", required=False)
         return parser
 
@@ -51,25 +52,24 @@ class CLI:
         except Exception as e:
             print(f"Error processing query: {e}")
 
-
     def get_summary(self):
-        if not self.args.directory:
+        if not self.args.dir:
             print("Error: directory is required for 'get_summary'")
             self.parser.print_help()
             return
-        summary = self.summarizer.process_directory(self.args.directory)
+        summary = self.summarizer.process_directory(self.args.dir)
         print(summary)
 
     def extract_and_embed(self):
-        if not self.args.directory:
+        if not self.args.dir:
             print("Error: directory is required for 'extract_and_embed'")
             self.parser.print_help()
             return
-        if not os.path.exists(self.args.directory):
-            print(f"Error: The directory {self.args.directory} does not exist.")
+        if not os.path.exists(self.args.dir):
+            print(f"Error: The directory {self.args.dir} does not exist.")
             return
         
-        code_extractor = AST_parser(self.args.directory)
+        code_extractor = AST_parser(self.args.dir)
         try:
             code_blocks = code_extractor.extract_code_blocks()
             for i, block in enumerate(code_blocks):
@@ -78,7 +78,33 @@ class CLI:
                 self.db.add_embedding(embedding, block)
         except Exception as e:
             print(f"Failed to process directory: {e}")
+        
+    def code_review(self):
+        if not self.args.file:
+            print("Error: file is required for 'code_review")
+            self.parser.print_help()
+            return
+        if not os.path.exists(self.args.file):
+            print(f"Error: The file {self.args.file} does not exist.")
+            return
+        try:
+            code = self.code_reviewer.get_code(self.args.file)
+            optimization_type= input("What modification type do you want to suggest? Press Enter to continue...")
+            review = self.code_reviewer.get_code_suggestion(code, optimization_type)
+            print(review)
+            user_response = input("Implement suggested changes? y/n:")
+            if user_response.lower() == 'y':
+                print("implementing changes...")
+                new_code = self.code_reviewer.implement_changes(code, review)
+                print(new_code)
+                with open(self.args.file, 'w') as f:
+                    f.write(new_code)
+                print("Changes implemented successfully.")
+            else:
+                print("No changes implemented.")
 
+        except Exception as e:
+            print(f"Failed to review code: {e}")
 
 if __name__ == "__main__":
     cli = CLI()

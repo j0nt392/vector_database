@@ -1,3 +1,3 @@
 {
-    "test_repository\\code.py": "This code creates a Vector class with x, y, and z attributes and a string representation method. It then creates three vectors and adds them to a database before iterating over and printing all the vectors."
+    "test_repository\\code.py": "This code creates a Vector class with x, y, and z attributes, and a string representation method. It then creates three instances of the Vector class and adds them to a list, before printing them out individually and iterating through the list to print all the vectors."
 }

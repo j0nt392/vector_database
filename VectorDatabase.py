@@ -16,7 +16,7 @@ class VectorDatabase:
         else:
             print("Invalid or empty embedding provided, not added to the index.")
     
-    def search(self, query_embedding, k=1):
+    def search(self, query_embedding, k=5):
         """Search for the k nearest neighbors of the query_embedding."""
         try:
             print(query_embedding)
