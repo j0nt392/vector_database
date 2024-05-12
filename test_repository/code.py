@@ -1,50 +1,54 @@
-# Define a Vector class to represent 3-dimensional vectors
 class Vector:
     """
-    A class to represent 3-dimensional vectors.
-
-    Attributes:
-        x (float): The x-coordinate of the vector.
-        y (float): The y-coordinate of the vector.
-        z (float): The z-coordinate of the vector.
+    This class represents a 3-dimensional vector with x, y, z components.
     """
 
     def __init__(self, x, y, z):
         """
-        Initialize a Vector object with given x, y, and z coordinates.
-
-        Parameters:
-            x (float): The x-coordinate of the vector.
-            y (float): The y-coordinate of the vector.
-            z (float): The z-coordinate of the vector.
+        Initializes a Vector object with given x, y, z components.
+        :param x: x component of the vector
+        :param y: y component of the vector
+        :param z: z component of the vector
         """
-        self.x = x
-        self.y = y
-        self.z = z
+        # Check if the input values are valid
+        if isinstance(x, (int, float)) and isinstance(y, (int, float)) and isinstance(z, (int, float)):
+            self.x = x
+            self.y = y
+            self.z = z
+        else:
+            raise TypeError("Input values must be numeric")
 
     def __str__(self):
         """
-        Return a string representation of the vector.
-
-        Returns:
-            str: A string representing the vector in the format (x, y, z).
+        Returns a string representation of the vector in the format (x, y, z).
+        :return: string representation of the vector
         """
         return f"({self.x}, {self.y}, {self.z})"
 
+    def magnitude(self):
+        """
+        Calculates the magnitude of the vector.
+        :return: magnitude of the vector
+        """
+        return (self.x ** 2 + self.y ** 2 + self.z ** 2) ** 0.5
 
-# Create some test vectors
-v1 = Vector(1, 2, 3)
-v2 = Vector(4, 5, 6)
-v3 = Vector(-1, -2, -3)
+
+# Create three vectors
+vector_1 = Vector(1, 2, 3)
+vector_2 = Vector(4, 5, 6)
+vector_3 = Vector(-1, -2, -3)
 
 # Print the vectors
-print(v1)
-print(v2)
-print(v3)
+print("Vector 1:", vector_1)
+print("Vector 2:", vector_2)
+print("Vector 3:", vector_3)
 
-# Add more vectors to the vector database
-vector_list = [v1, v2, v3]
+# Create a list of vectors
+vector_list = [vector_1, vector_2, vector_3]
 
-# Iterate over the vectors and print them
+# Print the list of vectors
+print("Vector list:", [vector for vector in vector_list])
+
+# Print the magnitude of each vector
 for vector in vector_list:
-    print(vector)
+    print(f"The magnitude of {vector} is {vector.magnitude()}")
