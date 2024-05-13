@@ -19,7 +19,6 @@ class VectorDatabase:
     def search(self, query_embedding, k=5):
         """Search for the k nearest neighbors of the query_embedding."""
         try:
-            print(query_embedding)
             D, I = self.index.search(np.array([query_embedding], dtype='float32'), k)
             print(I[0])
             return [(i, self.metadata[i]) for i in I[0]]  # Return indices and metadata
@@ -41,9 +40,10 @@ class VectorDatabase:
                 self.metadata = pickle.load(f)
         except FileNotFoundError:
             print(f"No saved index or metadata found, initializing new index.")
-            self.index = faiss.IndexFlatL2(256)
+            self.index = faiss.IndexFlatL2(768)
             self.metadata = []
         except Exception as e:
             print(f"Failed to load index and metadata: {e}")
-            self.index = faiss.IndexFlatL2(256)
+            self.index = faiss.IndexFlatL2(768)
             self.metadata = []
+            

@@ -1,3 +1,4 @@
 {
-    "test_repository\\code.py": "This code creates a Vector class with x, y, and z attributes, and a string representation method. It then creates three instances of the Vector class and adds them to a list, before printing them out individually and iterating through the list to print all the vectors."
+    "test_repository\\code.py": "Here is a brief summary of the Python code:\n\nThis code defines a `Vector` class that represents a 3-dimensional vector with x, y, and z coordinates. The class has methods to initialize the vector, return its string representation, and calculate its magnitude (length). The code then creates three instances of the `Vector` class and prints their representations and magnitudes.",
+    "test_repository\\code2.py": "This Python code defines a `NumberSquare` class that calculates and prints the square of a given number, and then instantiates an object from this class to print the square of the number 5."
 }

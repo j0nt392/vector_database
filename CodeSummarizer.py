@@ -1,6 +1,8 @@
 import os
 from openai import OpenAI
 import json
+import ollama 
+import warnings
 
 class CodeSummarizer:
     def __init__(self, client):
@@ -10,13 +12,21 @@ class CodeSummarizer:
         with open(file_path, 'r') as f:
             content = f.read()
         prompt = f"Provide a brief summary of this Python code in one or two sentences:\n\n{content}\n\n### End of Code ###"
-        summary = self.client.completions.create(
-            model="gpt-3.5-turbo-instruct",
-            prompt=prompt,
-            max_tokens=100,
-            temperature=0.5
-        )
-        return summary.choices[0].text.strip()
+        # summary = self.client.completions.create(
+        #     model="gpt-3.5-turbo-instruct",
+        #     prompt=prompt,
+        #     max_tokens=100,
+        #     temperature=0.5
+        # )
+        # return summary.choices[0].text.strip()
+        response = ollama.chat(model='llama3', messages=[
+            {
+                'role': 'user',
+                'content': prompt,
+            },
+            ])
+        warnings.warn("This is a deprecation warning.", FutureWarning)
+        return response['message']['content']
     
     def process_directory(self, directory_path):
         summaries = {}

@@ -1,0 +1,49 @@
+2024-05-13 15:18:14,815 - py.warnings - WARNING - C:\Users\jonte\kodprojekt\gunnar\venv\Lib\site-packages\huggingface_hub\file_download.py:1132: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+
+2024-05-13 15:18:17,665 - py.warnings - WARNING - C:\Users\jonte\kodprojekt\gunnar\venv\Lib\site-packages\huggingface_hub\file_download.py:1132: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+
+2024-05-13 15:18:29,731 - py.warnings - WARNING - C:\Users\jonte\kodprojekt\gunnar\venv\Lib\site-packages\huggingface_hub\file_download.py:1132: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+
+2024-05-13 15:18:32,148 - py.warnings - WARNING - C:\Users\jonte\kodprojekt\gunnar\venv\Lib\site-packages\huggingface_hub\file_download.py:1132: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+
+2024-05-13 15:23:37,576 - py.warnings - WARNING - C:\Users\jonte\kodprojekt\gunnar\venv\Lib\site-packages\huggingface_hub\file_download.py:1132: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+
+2024-05-13 15:23:40,753 - py.warnings - WARNING - C:\Users\jonte\kodprojekt\gunnar\venv\Lib\site-packages\huggingface_hub\file_download.py:1132: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+
+2024-05-13 15:24:44,220 - py.warnings - WARNING - C:\Users\jonte\kodprojekt\gunnar\CodeSummarizer.py:28: FutureWarning: This is a deprecation warning.
+  warnings.warn("This is a deprecation warning.", FutureWarning)
+
+2024-05-13 15:26:54,609 - py.warnings - WARNING - C:\Users\jonte\kodprojekt\gunnar\venv\Lib\site-packages\huggingface_hub\file_download.py:1132: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+
+2024-05-13 15:26:59,774 - py.warnings - WARNING - C:\Users\jonte\kodprojekt\gunnar\venv\Lib\site-packages\huggingface_hub\file_download.py:1132: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+
+2024-05-13 15:27:02,157 - root - ERROR - Error in query_vdb: This is a test error
+Traceback (most recent call last):
+  File "C:\Users\jonte\kodprojekt\gunnar\decorators.py", line 26, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jonte\kodprojekt\gunnar\main.py", line 66, in query_vdb
+    raise ValueError("This is a test error")
+ValueError: This is a test error
+2024-05-13 15:28:43,243 - py.warnings - WARNING - C:\Users\jonte\kodprojekt\gunnar\venv\Lib\site-packages\huggingface_hub\file_download.py:1132: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+
+2024-05-13 15:28:46,958 - py.warnings - WARNING - C:\Users\jonte\kodprojekt\gunnar\venv\Lib\site-packages\huggingface_hub\file_download.py:1132: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+
+2024-05-13 15:28:48,375 - root - ERROR - Error in query_vdb: This is a test error
+Traceback (most recent call last):
+  File "C:\Users\jonte\kodprojekt\gunnar\decorators.py", line 26, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jonte\kodprojekt\gunnar\main.py", line 66, in query_vdb
+    raise ValueError("This is a test error")
+ValueError: This is a test error
