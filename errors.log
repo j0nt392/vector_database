@@ -47,3 +47,279 @@ Traceback (most recent call last):
   File "C:\Users\jonte\kodprojekt\gunnar\main.py", line 66, in query_vdb
     raise ValueError("This is a test error")
 ValueError: This is a test error
+2024-05-13 16:00:26,097 - py.warnings - WARNING - C:\Users\jonte\kodprojekt\gunnar\venv\Lib\site-packages\huggingface_hub\file_download.py:1132: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+
+2024-05-13 16:00:29,920 - py.warnings - WARNING - C:\Users\jonte\kodprojekt\gunnar\venv\Lib\site-packages\huggingface_hub\file_download.py:1132: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+
+2024-05-13 16:00:36,120 - py.warnings - WARNING - C:\Users\jonte\kodprojekt\gunnar\venv\Lib\site-packages\joblib\externals\loky\backend\context.py:136: UserWarning: Could not find the number of physical cores for the following reason:
+found 0 physical cores < 1
+Returning the number of logical cores instead. You can silence this warning by setting LOKY_MAX_CPU_COUNT to the number of cores you want to use.
+  warnings.warn(
+
+2024-05-13 16:00:36,224 - py.warnings - WARNING - C:\Users\jonte\kodprojekt\gunnar\venv\Lib\site-packages\threadpoolctl.py:1214: RuntimeWarning: 
+Found Intel OpenMP ('libiomp') and LLVM OpenMP ('libomp') loaded at
+the same time. Both libraries are known to be incompatible and this
+can cause random crashes or deadlocks on Linux when loaded in the
+same Python program.
+Using threadpoolctl may cause crashes or deadlocks. For more
+information and possible workarounds, please see
+    https://github.com/joblib/threadpoolctl/blob/master/multiple_openmp.md
+
+  warnings.warn(msg, RuntimeWarning)
+
+2024-05-13 16:00:36,288 - root - ERROR - Error in plot_vdb: perplexity must be less than n_samples
+Traceback (most recent call last):
+  File "C:\Users\jonte\kodprojekt\gunnar\decorators.py", line 26, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jonte\kodprojekt\gunnar\main.py", line 136, in plot_vdb
+    plotter.plot_2D_cluster(title, n_clusters)
+  File "C:\Users\jonte\kodprojekt\gunnar\Plotting.py", line 29, in plot_2D_cluster
+    vectors_2D = tsne.fit_transform(self.vector_database)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jonte\kodprojekt\gunnar\venv\Lib\site-packages\sklearn\utils\_set_output.py", line 295, in wrapped
+    data_to_wrap = f(self, X, *args, **kwargs)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jonte\kodprojekt\gunnar\venv\Lib\site-packages\sklearn\base.py", line 1474, in wrapper
+    return fit_method(estimator, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jonte\kodprojekt\gunnar\venv\Lib\site-packages\sklearn\manifold\_t_sne.py", line 1135, in fit_transform
+    self._check_params_vs_input(X)
+  File "C:\Users\jonte\kodprojekt\gunnar\venv\Lib\site-packages\sklearn\manifold\_t_sne.py", line 846, in _check_params_vs_input
+    raise ValueError("perplexity must be less than n_samples")
+ValueError: perplexity must be less than n_samples
+2024-05-13 16:02:29,780 - py.warnings - WARNING - C:\Users\jonte\kodprojekt\gunnar\venv\Lib\site-packages\huggingface_hub\file_download.py:1132: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+
+2024-05-13 16:02:33,426 - py.warnings - WARNING - C:\Users\jonte\kodprojekt\gunnar\venv\Lib\site-packages\huggingface_hub\file_download.py:1132: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+
+2024-05-13 16:02:36,705 - py.warnings - WARNING - C:\Users\jonte\kodprojekt\gunnar\venv\Lib\site-packages\joblib\externals\loky\backend\context.py:136: UserWarning: Could not find the number of physical cores for the following reason:
+found 0 physical cores < 1
+Returning the number of logical cores instead. You can silence this warning by setting LOKY_MAX_CPU_COUNT to the number of cores you want to use.
+  warnings.warn(
+
+2024-05-13 16:02:36,781 - py.warnings - WARNING - C:\Users\jonte\kodprojekt\gunnar\venv\Lib\site-packages\threadpoolctl.py:1214: RuntimeWarning: 
+Found Intel OpenMP ('libiomp') and LLVM OpenMP ('libomp') loaded at
+the same time. Both libraries are known to be incompatible and this
+can cause random crashes or deadlocks on Linux when loaded in the
+same Python program.
+Using threadpoolctl may cause crashes or deadlocks. For more
+information and possible workarounds, please see
+    https://github.com/joblib/threadpoolctl/blob/master/multiple_openmp.md
+
+  warnings.warn(msg, RuntimeWarning)
+
+2024-05-13 16:02:36,799 - root - ERROR - Error in plot_vdb: perplexity must be less than n_samples
+Traceback (most recent call last):
+  File "C:\Users\jonte\kodprojekt\gunnar\decorators.py", line 26, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jonte\kodprojekt\gunnar\main.py", line 136, in plot_vdb
+    plotter.plot_2D_cluster(title, n_clusters)
+  File "C:\Users\jonte\kodprojekt\gunnar\Plotting.py", line 29, in plot_2D_cluster
+    vectors_2D = tsne.fit_transform(self.vector_database)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jonte\kodprojekt\gunnar\venv\Lib\site-packages\sklearn\utils\_set_output.py", line 295, in wrapped
+    data_to_wrap = f(self, X, *args, **kwargs)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jonte\kodprojekt\gunnar\venv\Lib\site-packages\sklearn\base.py", line 1474, in wrapper
+    return fit_method(estimator, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jonte\kodprojekt\gunnar\venv\Lib\site-packages\sklearn\manifold\_t_sne.py", line 1135, in fit_transform
+    self._check_params_vs_input(X)
+  File "C:\Users\jonte\kodprojekt\gunnar\venv\Lib\site-packages\sklearn\manifold\_t_sne.py", line 846, in _check_params_vs_input
+    raise ValueError("perplexity must be less than n_samples")
+ValueError: perplexity must be less than n_samples
+2024-05-13 16:02:53,268 - py.warnings - WARNING - C:\Users\jonte\kodprojekt\gunnar\venv\Lib\site-packages\huggingface_hub\file_download.py:1132: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+
+2024-05-13 16:02:56,303 - py.warnings - WARNING - C:\Users\jonte\kodprojekt\gunnar\venv\Lib\site-packages\huggingface_hub\file_download.py:1132: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+
+2024-05-13 16:03:12,633 - py.warnings - WARNING - C:\Users\jonte\kodprojekt\gunnar\venv\Lib\site-packages\joblib\externals\loky\backend\context.py:136: UserWarning: Could not find the number of physical cores for the following reason:
+found 0 physical cores < 1
+Returning the number of logical cores instead. You can silence this warning by setting LOKY_MAX_CPU_COUNT to the number of cores you want to use.
+  warnings.warn(
+
+2024-05-13 16:03:12,705 - py.warnings - WARNING - C:\Users\jonte\kodprojekt\gunnar\venv\Lib\site-packages\threadpoolctl.py:1214: RuntimeWarning: 
+Found Intel OpenMP ('libiomp') and LLVM OpenMP ('libomp') loaded at
+the same time. Both libraries are known to be incompatible and this
+can cause random crashes or deadlocks on Linux when loaded in the
+same Python program.
+Using threadpoolctl may cause crashes or deadlocks. For more
+information and possible workarounds, please see
+    https://github.com/joblib/threadpoolctl/blob/master/multiple_openmp.md
+
+  warnings.warn(msg, RuntimeWarning)
+
+2024-05-13 16:03:12,724 - root - ERROR - Error in plot_vdb: perplexity must be less than n_samples
+Traceback (most recent call last):
+  File "C:\Users\jonte\kodprojekt\gunnar\decorators.py", line 26, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jonte\kodprojekt\gunnar\main.py", line 136, in plot_vdb
+    plotter.plot_2D_cluster(title, n_clusters)
+  File "C:\Users\jonte\kodprojekt\gunnar\Plotting.py", line 29, in plot_2D_cluster
+    vectors_2D = tsne.fit_transform(self.vector_database)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jonte\kodprojekt\gunnar\venv\Lib\site-packages\sklearn\utils\_set_output.py", line 295, in wrapped
+    data_to_wrap = f(self, X, *args, **kwargs)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jonte\kodprojekt\gunnar\venv\Lib\site-packages\sklearn\base.py", line 1474, in wrapper
+    return fit_method(estimator, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jonte\kodprojekt\gunnar\venv\Lib\site-packages\sklearn\manifold\_t_sne.py", line 1135, in fit_transform
+    self._check_params_vs_input(X)
+  File "C:\Users\jonte\kodprojekt\gunnar\venv\Lib\site-packages\sklearn\manifold\_t_sne.py", line 846, in _check_params_vs_input
+    raise ValueError("perplexity must be less than n_samples")
+ValueError: perplexity must be less than n_samples
+2024-05-13 16:03:23,151 - py.warnings - WARNING - C:\Users\jonte\kodprojekt\gunnar\venv\Lib\site-packages\huggingface_hub\file_download.py:1132: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+
+2024-05-13 16:03:25,807 - py.warnings - WARNING - C:\Users\jonte\kodprojekt\gunnar\venv\Lib\site-packages\huggingface_hub\file_download.py:1132: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+
+2024-05-13 16:03:29,347 - py.warnings - WARNING - C:\Users\jonte\kodprojekt\gunnar\venv\Lib\site-packages\joblib\externals\loky\backend\context.py:136: UserWarning: Could not find the number of physical cores for the following reason:
+found 0 physical cores < 1
+Returning the number of logical cores instead. You can silence this warning by setting LOKY_MAX_CPU_COUNT to the number of cores you want to use.
+  warnings.warn(
+
+2024-05-13 16:03:29,422 - py.warnings - WARNING - C:\Users\jonte\kodprojekt\gunnar\venv\Lib\site-packages\threadpoolctl.py:1214: RuntimeWarning: 
+Found Intel OpenMP ('libiomp') and LLVM OpenMP ('libomp') loaded at
+the same time. Both libraries are known to be incompatible and this
+can cause random crashes or deadlocks on Linux when loaded in the
+same Python program.
+Using threadpoolctl may cause crashes or deadlocks. For more
+information and possible workarounds, please see
+    https://github.com/joblib/threadpoolctl/blob/master/multiple_openmp.md
+
+  warnings.warn(msg, RuntimeWarning)
+
+2024-05-13 16:03:29,438 - root - ERROR - Error in plot_vdb: perplexity must be less than n_samples
+Traceback (most recent call last):
+  File "C:\Users\jonte\kodprojekt\gunnar\decorators.py", line 26, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jonte\kodprojekt\gunnar\main.py", line 136, in plot_vdb
+    plotter.plot_2D_cluster(title, n_clusters)
+  File "C:\Users\jonte\kodprojekt\gunnar\Plotting.py", line 29, in plot_2D_cluster
+    vectors_2D = tsne.fit_transform(self.vector_database)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jonte\kodprojekt\gunnar\venv\Lib\site-packages\sklearn\utils\_set_output.py", line 295, in wrapped
+    data_to_wrap = f(self, X, *args, **kwargs)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jonte\kodprojekt\gunnar\venv\Lib\site-packages\sklearn\base.py", line 1474, in wrapper
+    return fit_method(estimator, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jonte\kodprojekt\gunnar\venv\Lib\site-packages\sklearn\manifold\_t_sne.py", line 1135, in fit_transform
+    self._check_params_vs_input(X)
+  File "C:\Users\jonte\kodprojekt\gunnar\venv\Lib\site-packages\sklearn\manifold\_t_sne.py", line 846, in _check_params_vs_input
+    raise ValueError("perplexity must be less than n_samples")
+ValueError: perplexity must be less than n_samples
+2024-05-13 16:05:29,696 - py.warnings - WARNING - C:\Users\jonte\kodprojekt\gunnar\venv\Lib\site-packages\huggingface_hub\file_download.py:1132: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+
+2024-05-13 16:05:32,141 - py.warnings - WARNING - C:\Users\jonte\kodprojekt\gunnar\venv\Lib\site-packages\huggingface_hub\file_download.py:1132: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+
+2024-05-13 16:05:35,305 - py.warnings - WARNING - C:\Users\jonte\kodprojekt\gunnar\venv\Lib\site-packages\joblib\externals\loky\backend\context.py:136: UserWarning: Could not find the number of physical cores for the following reason:
+found 0 physical cores < 1
+Returning the number of logical cores instead. You can silence this warning by setting LOKY_MAX_CPU_COUNT to the number of cores you want to use.
+  warnings.warn(
+
+2024-05-13 16:05:35,398 - py.warnings - WARNING - C:\Users\jonte\kodprojekt\gunnar\venv\Lib\site-packages\threadpoolctl.py:1214: RuntimeWarning: 
+Found Intel OpenMP ('libiomp') and LLVM OpenMP ('libomp') loaded at
+the same time. Both libraries are known to be incompatible and this
+can cause random crashes or deadlocks on Linux when loaded in the
+same Python program.
+Using threadpoolctl may cause crashes or deadlocks. For more
+information and possible workarounds, please see
+    https://github.com/joblib/threadpoolctl/blob/master/multiple_openmp.md
+
+  warnings.warn(msg, RuntimeWarning)
+
+2024-05-13 16:05:35,533 - root - ERROR - Error in plot_vdb: perplexity must be less than n_samples
+Traceback (most recent call last):
+  File "C:\Users\jonte\kodprojekt\gunnar\decorators.py", line 26, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jonte\kodprojekt\gunnar\main.py", line 136, in plot_vdb
+    plotter.plot_2D_cluster(title, n_clusters)
+  File "C:\Users\jonte\kodprojekt\gunnar\Plotting.py", line 25, in plot_2D_cluster
+    vectors_2D = tsne.fit_transform(self.vector_database)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jonte\kodprojekt\gunnar\venv\Lib\site-packages\sklearn\utils\_set_output.py", line 295, in wrapped
+    data_to_wrap = f(self, X, *args, **kwargs)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jonte\kodprojekt\gunnar\venv\Lib\site-packages\sklearn\base.py", line 1474, in wrapper
+    return fit_method(estimator, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jonte\kodprojekt\gunnar\venv\Lib\site-packages\sklearn\manifold\_t_sne.py", line 1135, in fit_transform
+    self._check_params_vs_input(X)
+  File "C:\Users\jonte\kodprojekt\gunnar\venv\Lib\site-packages\sklearn\manifold\_t_sne.py", line 846, in _check_params_vs_input
+    raise ValueError("perplexity must be less than n_samples")
+ValueError: perplexity must be less than n_samples
+2024-05-13 16:07:21,012 - py.warnings - WARNING - C:\Users\jonte\kodprojekt\gunnar\venv\Lib\site-packages\huggingface_hub\file_download.py:1132: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+
+2024-05-13 16:07:23,671 - py.warnings - WARNING - C:\Users\jonte\kodprojekt\gunnar\venv\Lib\site-packages\huggingface_hub\file_download.py:1132: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+
+2024-05-13 16:07:25,640 - py.warnings - WARNING - C:\Users\jonte\kodprojekt\gunnar\venv\Lib\site-packages\joblib\externals\loky\backend\context.py:136: UserWarning: Could not find the number of physical cores for the following reason:
+found 0 physical cores < 1
+Returning the number of logical cores instead. You can silence this warning by setting LOKY_MAX_CPU_COUNT to the number of cores you want to use.
+  warnings.warn(
+
+2024-05-13 16:07:25,714 - py.warnings - WARNING - C:\Users\jonte\kodprojekt\gunnar\venv\Lib\site-packages\threadpoolctl.py:1214: RuntimeWarning: 
+Found Intel OpenMP ('libiomp') and LLVM OpenMP ('libomp') loaded at
+the same time. Both libraries are known to be incompatible and this
+can cause random crashes or deadlocks on Linux when loaded in the
+same Python program.
+Using threadpoolctl may cause crashes or deadlocks. For more
+information and possible workarounds, please see
+    https://github.com/joblib/threadpoolctl/blob/master/multiple_openmp.md
+
+  warnings.warn(msg, RuntimeWarning)
+
+2024-05-13 16:07:25,929 - root - ERROR - Error in plot_vdb: 'TSNE' object has no attribute 'transform'
+Traceback (most recent call last):
+  File "C:\Users\jonte\kodprojekt\gunnar\decorators.py", line 26, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jonte\kodprojekt\gunnar\main.py", line 136, in plot_vdb
+    plotter.plot_2D_cluster(title, n_clusters)
+  File "C:\Users\jonte\kodprojekt\gunnar\Plotting.py", line 28, in plot_2D_cluster
+    cluster_centers_2D = tsne.transform(kmeans.cluster_centers_)
+                         ^^^^^^^^^^^^^^
+AttributeError: 'TSNE' object has no attribute 'transform'. Did you mean: 'fit_transform'?
+2024-05-13 16:10:02,132 - py.warnings - WARNING - C:\Users\jonte\kodprojekt\gunnar\venv\Lib\site-packages\huggingface_hub\file_download.py:1132: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+
+2024-05-13 16:10:04,823 - py.warnings - WARNING - C:\Users\jonte\kodprojekt\gunnar\venv\Lib\site-packages\huggingface_hub\file_download.py:1132: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+
+2024-05-13 16:10:08,850 - py.warnings - WARNING - C:\Users\jonte\kodprojekt\gunnar\venv\Lib\site-packages\joblib\externals\loky\backend\context.py:136: UserWarning: Could not find the number of physical cores for the following reason:
+found 0 physical cores < 1
+Returning the number of logical cores instead. You can silence this warning by setting LOKY_MAX_CPU_COUNT to the number of cores you want to use.
+  warnings.warn(
+
+2024-05-13 16:10:08,925 - py.warnings - WARNING - C:\Users\jonte\kodprojekt\gunnar\venv\Lib\site-packages\threadpoolctl.py:1214: RuntimeWarning: 
+Found Intel OpenMP ('libiomp') and LLVM OpenMP ('libomp') loaded at
+the same time. Both libraries are known to be incompatible and this
+can cause random crashes or deadlocks on Linux when loaded in the
+same Python program.
+Using threadpoolctl may cause crashes or deadlocks. For more
+information and possible workarounds, please see
+    https://github.com/joblib/threadpoolctl/blob/master/multiple_openmp.md
+
+  warnings.warn(msg, RuntimeWarning)
+
+2024-05-13 16:11:53,136 - py.warnings - WARNING - C:\Users\jonte\kodprojekt\gunnar\venv\Lib\site-packages\huggingface_hub\file_download.py:1132: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+
+2024-05-13 16:11:56,350 - py.warnings - WARNING - C:\Users\jonte\kodprojekt\gunnar\venv\Lib\site-packages\huggingface_hub\file_download.py:1132: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+

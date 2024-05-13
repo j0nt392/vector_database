@@ -25,6 +25,9 @@ class VectorDatabase:
         except Exception as e:
             print(f"Search error: {e}")
             return []  # Return an empty list if there's an error
+    
+    def get_all_vectors(self):
+        return self.index.reconstruct_n(0, self.index.ntotal)
 
     def save_index(self):
         """Save the FAISS index and metadata to disk."""

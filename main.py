@@ -1,7 +1,9 @@
+import matplotlib.pyplot as plt
 import argparse
 from openai import OpenAI
 from dotenv import load_dotenv
 import os
+from Plotting import Plotting
 from VectorDatabase import VectorDatabase
 from CodeSummarizer import CodeSummarizer
 from Embeddings import Embeddings
@@ -31,7 +33,7 @@ class CLI:
 
     def setup_parser(self):
         parser = argparse.ArgumentParser(description="CLI for interacting with AI models and codebase information")
-        parser.add_argument("command", help="The command to run", choices=["query_vdb", "get_summary", "extract_and_embed", "code_review"])
+        parser.add_argument("command", help="The command to run", choices=["query_vdb", "get_summary", "extract_and_embed", "code_review", "plot_vdb"])
         parser.add_argument("--dir", help="Directory to process for extracting and embedding code blocks")
         parser.add_argument("--file", help="File to review code")
         parser.add_argument("--query", help="Query string to search for", required=False)
@@ -125,6 +127,13 @@ class CLI:
         
         else:
             print("No changes implemented.")
+    
+    @log_errors
+    def plot_vdb(self):
+        title = input("Enter the title of the plot: ")
+        n_clusters = int(input("Enter the number of clusters: "))
+        plotter = Plotting(self.db.get_all_vectors())
+        plotter.plot_2D_cluster_pca(title, n_clusters)
 
 if __name__ == "__main__":
     cli = CLI()
