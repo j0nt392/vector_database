@@ -32,18 +32,18 @@ class Embeddings:
         Returns:
             An L2-normalized embedding vector for the code snippet.
         """
-        code_tokens = self.tokenizer.encode(code_snippet, return_tensors="pt", padding=True, truncation=True)
-        output = self.model(input_ids=code_tokens)
-        embedding = output.last_hidden_state.mean(dim=1).detach().numpy()
-        return self._normalize_l2(embedding) if np.any(embedding) else np.zeros(768)
+        # code_tokens = self.tokenizer.encode(code_snippet, return_tensors="pt", padding=True, truncation=True, max_length=128)
+        # output = self.model(input_ids=code_tokens)
+        # embedding = output.last_hidden_state.mean(dim=1).detach().numpy()
+        # return self._normalize_l2(embedding) if np.any(embedding) else np.zeros(768)
 
-        # response = self.client.embeddings.create(
-        #     model="text-embedding-3-small", 
-        #     input=code, 
-        #     encoding_format="float"
-        # )
-        # embedding = np.array(response.data[0].embedding[:256]) if response.data else np.zeros(256)
-        # return self._normalize_l2(embedding) if np.any(embedding) else np.zeros(256)
+        response = self.client.embeddings.create(
+            model="text-embedding-3-small", 
+            input=code_snippet, 
+            encoding_format="float"
+        )
+        embedding = np.array(response.data[0].embedding[:768]) if response.data else np.zeros(768)
+        return self._normalize_l2(embedding) if np.any(embedding) else np.zeros(768)
 
     def _normalize_l2(self, normalized_x):
         """

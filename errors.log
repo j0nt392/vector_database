@@ -323,3 +323,219 @@ information and possible workarounds, please see
 2024-05-13 16:11:56,350 - py.warnings - WARNING - C:\Users\jonte\kodprojekt\gunnar\venv\Lib\site-packages\huggingface_hub\file_download.py:1132: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
   warnings.warn(
 
+2024-05-13 16:14:54,698 - py.warnings - WARNING - C:\Users\jonte\kodprojekt\gunnar\venv\Lib\site-packages\huggingface_hub\file_download.py:1132: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+
+2024-05-13 16:14:57,329 - py.warnings - WARNING - C:\Users\jonte\kodprojekt\gunnar\venv\Lib\site-packages\huggingface_hub\file_download.py:1132: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+
+2024-05-13 16:15:01,579 - py.warnings - WARNING - C:\Users\jonte\kodprojekt\gunnar\venv\Lib\site-packages\joblib\externals\loky\backend\context.py:136: UserWarning: Could not find the number of physical cores for the following reason:
+found 0 physical cores < 1
+Returning the number of logical cores instead. You can silence this warning by setting LOKY_MAX_CPU_COUNT to the number of cores you want to use.
+  warnings.warn(
+
+2024-05-13 16:15:01,662 - py.warnings - WARNING - C:\Users\jonte\kodprojekt\gunnar\venv\Lib\site-packages\threadpoolctl.py:1214: RuntimeWarning: 
+Found Intel OpenMP ('libiomp') and LLVM OpenMP ('libomp') loaded at
+the same time. Both libraries are known to be incompatible and this
+can cause random crashes or deadlocks on Linux when loaded in the
+same Python program.
+Using threadpoolctl may cause crashes or deadlocks. For more
+information and possible workarounds, please see
+    https://github.com/joblib/threadpoolctl/blob/master/multiple_openmp.md
+
+  warnings.warn(msg, RuntimeWarning)
+
+2024-05-13 16:15:29,165 - py.warnings - WARNING - C:\Users\jonte\kodprojekt\gunnar\venv\Lib\site-packages\huggingface_hub\file_download.py:1132: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+
+2024-05-13 16:15:31,918 - py.warnings - WARNING - C:\Users\jonte\kodprojekt\gunnar\venv\Lib\site-packages\huggingface_hub\file_download.py:1132: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+
+2024-05-13 16:15:44,188 - py.warnings - WARNING - C:\Users\jonte\kodprojekt\gunnar\venv\Lib\site-packages\joblib\externals\loky\backend\context.py:136: UserWarning: Could not find the number of physical cores for the following reason:
+found 0 physical cores < 1
+Returning the number of logical cores instead. You can silence this warning by setting LOKY_MAX_CPU_COUNT to the number of cores you want to use.
+  warnings.warn(
+
+2024-05-13 16:15:44,261 - py.warnings - WARNING - C:\Users\jonte\kodprojekt\gunnar\venv\Lib\site-packages\threadpoolctl.py:1214: RuntimeWarning: 
+Found Intel OpenMP ('libiomp') and LLVM OpenMP ('libomp') loaded at
+the same time. Both libraries are known to be incompatible and this
+can cause random crashes or deadlocks on Linux when loaded in the
+same Python program.
+Using threadpoolctl may cause crashes or deadlocks. For more
+information and possible workarounds, please see
+    https://github.com/joblib/threadpoolctl/blob/master/multiple_openmp.md
+
+  warnings.warn(msg, RuntimeWarning)
+
+2024-05-13 16:25:57,518 - py.warnings - WARNING - C:\Users\jonte\kodprojekt\gunnar\venv\Lib\site-packages\huggingface_hub\file_download.py:1132: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+
+2024-05-13 16:25:59,966 - py.warnings - WARNING - C:\Users\jonte\kodprojekt\gunnar\venv\Lib\site-packages\huggingface_hub\file_download.py:1132: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+
+2024-05-13 16:26:01,635 - root - ERROR - Error in query_vdb: This is a test error
+Traceback (most recent call last):
+  File "C:\Users\jonte\kodprojekt\gunnar\decorators.py", line 26, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jonte\kodprojekt\gunnar\main.py", line 68, in query_vdb
+    raise ValueError("This is a test error")
+ValueError: This is a test error
+2024-05-13 16:26:28,528 - py.warnings - WARNING - C:\Users\jonte\kodprojekt\gunnar\venv\Lib\site-packages\huggingface_hub\file_download.py:1132: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+
+2024-05-13 16:26:30,873 - py.warnings - WARNING - C:\Users\jonte\kodprojekt\gunnar\venv\Lib\site-packages\huggingface_hub\file_download.py:1132: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+
+2024-05-13 16:26:31,836 - root - ERROR - Error in query_vdb: This is a test error
+Traceback (most recent call last):
+  File "C:\Users\jonte\kodprojekt\gunnar\decorators.py", line 26, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jonte\kodprojekt\gunnar\main.py", line 68, in query_vdb
+    raise ValueError("This is a test error")
+ValueError: This is a test error
+2024-05-13 16:30:33,582 - py.warnings - WARNING - C:\Users\jonte\kodprojekt\gunnar\venv\Lib\site-packages\huggingface_hub\file_download.py:1132: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+
+2024-05-13 16:30:35,937 - py.warnings - WARNING - C:\Users\jonte\kodprojekt\gunnar\venv\Lib\site-packages\huggingface_hub\file_download.py:1132: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+
+2024-05-13 16:30:41,642 - py.warnings - WARNING - C:\Users\jonte\kodprojekt\gunnar\venv\Lib\site-packages\joblib\externals\loky\backend\context.py:136: UserWarning: Could not find the number of physical cores for the following reason:
+found 0 physical cores < 1
+Returning the number of logical cores instead. You can silence this warning by setting LOKY_MAX_CPU_COUNT to the number of cores you want to use.
+  warnings.warn(
+
+2024-05-13 16:30:41,717 - py.warnings - WARNING - C:\Users\jonte\kodprojekt\gunnar\venv\Lib\site-packages\threadpoolctl.py:1214: RuntimeWarning: 
+Found Intel OpenMP ('libiomp') and LLVM OpenMP ('libomp') loaded at
+the same time. Both libraries are known to be incompatible and this
+can cause random crashes or deadlocks on Linux when loaded in the
+same Python program.
+Using threadpoolctl may cause crashes or deadlocks. For more
+information and possible workarounds, please see
+    https://github.com/joblib/threadpoolctl/blob/master/multiple_openmp.md
+
+  warnings.warn(msg, RuntimeWarning)
+
+2024-05-13 16:37:17,647 - py.warnings - WARNING - C:\Users\jonte\kodprojekt\gunnar\venv\Lib\site-packages\huggingface_hub\file_download.py:1132: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+
+2024-05-13 16:37:20,347 - py.warnings - WARNING - C:\Users\jonte\kodprojekt\gunnar\venv\Lib\site-packages\huggingface_hub\file_download.py:1132: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+
+2024-05-13 16:49:48,949 - py.warnings - WARNING - C:\Users\jonte\kodprojekt\gunnar\venv\Lib\site-packages\huggingface_hub\file_download.py:1132: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+
+2024-05-13 16:49:52,465 - py.warnings - WARNING - C:\Users\jonte\kodprojekt\gunnar\venv\Lib\site-packages\huggingface_hub\file_download.py:1132: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+
+2024-05-13 16:49:54,399 - root - ERROR - Error in query_vdb: This is a test error
+Traceback (most recent call last):
+  File "C:\Users\jonte\kodprojekt\gunnar\decorators.py", line 26, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jonte\kodprojekt\gunnar\main.py", line 68, in query_vdb
+    raise ValueError("This is a test error")
+ValueError: This is a test error
+2024-05-13 16:50:43,423 - py.warnings - WARNING - C:\Users\jonte\kodprojekt\gunnar\venv\Lib\site-packages\huggingface_hub\file_download.py:1132: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+
+2024-05-13 16:50:45,777 - py.warnings - WARNING - C:\Users\jonte\kodprojekt\gunnar\venv\Lib\site-packages\huggingface_hub\file_download.py:1132: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+
+2024-05-13 16:50:59,071 - py.warnings - WARNING - C:\Users\jonte\kodprojekt\gunnar\venv\Lib\site-packages\huggingface_hub\file_download.py:1132: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+
+2024-05-13 16:51:01,660 - py.warnings - WARNING - C:\Users\jonte\kodprojekt\gunnar\venv\Lib\site-packages\huggingface_hub\file_download.py:1132: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+
+2024-05-13 16:51:02,821 - root - ERROR - Error in query_vdb: This is a test error
+Traceback (most recent call last):
+  File "C:\Users\jonte\kodprojekt\gunnar\decorators.py", line 26, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jonte\kodprojekt\gunnar\main.py", line 68, in query_vdb
+    raise ValueError("This is a test error")
+ValueError: This is a test error
+2024-05-13 16:51:23,908 - py.warnings - WARNING - C:\Users\jonte\kodprojekt\gunnar\venv\Lib\site-packages\huggingface_hub\file_download.py:1132: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+
+2024-05-13 16:51:26,293 - py.warnings - WARNING - C:\Users\jonte\kodprojekt\gunnar\venv\Lib\site-packages\huggingface_hub\file_download.py:1132: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+
+2024-05-13 16:51:27,338 - root - ERROR - Error in query_vdb: This is a test error
+Traceback (most recent call last):
+  File "C:\Users\jonte\kodprojekt\gunnar\decorators.py", line 26, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jonte\kodprojekt\gunnar\main.py", line 68, in query_vdb
+    raise ValueError("This is a test error")
+ValueError: This is a test error
+2024-05-13 16:52:30,157 - py.warnings - WARNING - C:\Users\jonte\kodprojekt\gunnar\venv\Lib\site-packages\huggingface_hub\file_download.py:1132: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+
+2024-05-13 16:52:32,641 - py.warnings - WARNING - C:\Users\jonte\kodprojekt\gunnar\venv\Lib\site-packages\huggingface_hub\file_download.py:1132: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+
+2024-05-13 16:52:32,924 - root - ERROR - Error in extract_and_embed: name 'code' is not defined
+Traceback (most recent call last):
+  File "C:\Users\jonte\kodprojekt\gunnar\decorators.py", line 26, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jonte\kodprojekt\gunnar\main.py", line 94, in extract_and_embed
+    embedding = self.embeddings.create_code_embedding(block['code_segment'])
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jonte\kodprojekt\gunnar\Embeddings.py", line 42, in create_code_embedding
+    input=code,
+         ^^^^
+NameError: name 'code' is not defined. Did you forget to import 'code'
+2024-05-13 16:53:09,835 - py.warnings - WARNING - C:\Users\jonte\kodprojekt\gunnar\venv\Lib\site-packages\huggingface_hub\file_download.py:1132: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+
+2024-05-13 16:53:12,236 - py.warnings - WARNING - C:\Users\jonte\kodprojekt\gunnar\venv\Lib\site-packages\huggingface_hub\file_download.py:1132: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+
+2024-05-13 16:53:31,372 - py.warnings - WARNING - C:\Users\jonte\kodprojekt\gunnar\venv\Lib\site-packages\huggingface_hub\file_download.py:1132: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+
+2024-05-13 16:53:34,005 - py.warnings - WARNING - C:\Users\jonte\kodprojekt\gunnar\venv\Lib\site-packages\huggingface_hub\file_download.py:1132: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+
+2024-05-13 16:53:34,770 - root - ERROR - Error in query_vdb: This is a test error
+Traceback (most recent call last):
+  File "C:\Users\jonte\kodprojekt\gunnar\decorators.py", line 26, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jonte\kodprojekt\gunnar\main.py", line 68, in query_vdb
+    raise ValueError("This is a test error")
+ValueError: This is a test error
+2024-05-13 16:59:44,660 - py.warnings - WARNING - C:\Users\jonte\kodprojekt\gunnar\venv\Lib\site-packages\huggingface_hub\file_download.py:1132: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+
+2024-05-13 16:59:47,093 - py.warnings - WARNING - C:\Users\jonte\kodprojekt\gunnar\venv\Lib\site-packages\huggingface_hub\file_download.py:1132: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+
+2024-05-13 16:59:47,932 - root - ERROR - Error in query_vdb: 'VectorDatabase' object has no attribute 'search'
+Traceback (most recent call last):
+  File "C:\Users\jonte\kodprojekt\gunnar\decorators.py", line 26, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jonte\kodprojekt\gunnar\main.py", line 59, in query_vdb
+    results = self.db.search(query_embedding)
+              ^^^^^^^^^^^^^^
+AttributeError: 'VectorDatabase' object has no attribute 'search'
+2024-05-13 17:00:02,375 - py.warnings - WARNING - C:\Users\jonte\kodprojekt\gunnar\venv\Lib\site-packages\huggingface_hub\file_download.py:1132: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+
+2024-05-13 17:00:04,936 - py.warnings - WARNING - C:\Users\jonte\kodprojekt\gunnar\venv\Lib\site-packages\huggingface_hub\file_download.py:1132: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+
+2024-05-13 17:00:05,737 - root - ERROR - Error in query_vdb: cannot unpack non-iterable numpy.int64 object
+Traceback (most recent call last):
+  File "C:\Users\jonte\kodprojekt\gunnar\decorators.py", line 26, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jonte\kodprojekt\gunnar\main.py", line 61, in query_vdb
+    for idx, result in results:
+        ^^^^^^^^^^^
+TypeError: cannot unpack non-iterable numpy.int64 object
