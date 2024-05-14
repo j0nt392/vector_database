@@ -539,3 +539,46 @@ Traceback (most recent call last):
     for idx, result in results:
         ^^^^^^^^^^^
 TypeError: cannot unpack non-iterable numpy.int64 object
+2024-05-14 09:54:56,028 - py.warnings - WARNING - C:\Users\jonte\kodprojekt\gunnar\venv\Lib\site-packages\huggingface_hub\file_download.py:1132: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+
+2024-05-14 09:55:00,382 - py.warnings - WARNING - C:\Users\jonte\kodprojekt\gunnar\venv\Lib\site-packages\huggingface_hub\file_download.py:1132: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+
+2024-05-14 09:55:57,892 - py.warnings - WARNING - C:\Users\jonte\kodprojekt\gunnar\venv\Lib\site-packages\huggingface_hub\file_download.py:1132: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+
+2024-05-14 09:56:01,792 - py.warnings - WARNING - C:\Users\jonte\kodprojekt\gunnar\venv\Lib\site-packages\huggingface_hub\file_download.py:1132: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+
+2024-05-14 09:56:03,086 - root - ERROR - Error in query_vdb: This is a test error
+Traceback (most recent call last):
+  File "C:\Users\jonte\kodprojekt\gunnar\decorators.py", line 26, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jonte\kodprojekt\gunnar\main.py", line 68, in query_vdb
+    raise ValueError("This is a test error")
+ValueError: This is a test error
+2024-05-14 09:56:47,424 - py.warnings - WARNING - C:\Users\jonte\kodprojekt\gunnar\venv\Lib\site-packages\huggingface_hub\file_download.py:1132: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+
+2024-05-14 09:56:50,439 - py.warnings - WARNING - C:\Users\jonte\kodprojekt\gunnar\venv\Lib\site-packages\huggingface_hub\file_download.py:1132: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+
+2024-05-14 09:56:51,315 - root - ERROR - Error in query_vdb: This is a test error
+Traceback (most recent call last):
+  File "C:\Users\jonte\kodprojekt\gunnar\decorators.py", line 26, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jonte\kodprojekt\gunnar\main.py", line 68, in query_vdb
+    raise ValueError("This is a test error")
+ValueError: This is a test error
+2024-05-14 09:58:37,674 - py.warnings - WARNING - C:\Users\jonte\kodprojekt\gunnar\venv\Lib\site-packages\huggingface_hub\file_download.py:1132: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+
+2024-05-14 09:58:40,400 - py.warnings - WARNING - C:\Users\jonte\kodprojekt\gunnar\venv\Lib\site-packages\huggingface_hub\file_download.py:1132: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+
+2024-05-14 10:00:08,138 - py.warnings - WARNING - C:\Users\jonte\kodprojekt\gunnar\CodeSummarizer.py:28: FutureWarning: This is a deprecation warning.
+  warnings.warn("This is a deprecation warning.", FutureWarning)
+

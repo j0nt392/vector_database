@@ -108,7 +108,7 @@ class CLI:
             return
         
         code = self.code_reviewer.get_code(self.args.file)
-        optimization_type= input("What modification type do you want to suggest? Press Enter to continue...")
+        optimization_type= input("What modification type do you want to suggest?")
         review = self.code_reviewer.get_code_suggestion(code, optimization_type)
         print(review)
         user_response = input("Implement suggested changes? y/n:")

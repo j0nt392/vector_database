@@ -1,14 +1,31 @@
-class NumberSquare:
-    def __init__(self, number):
-        self.number = number
+import random
 
-    def calculate_square(self):
-        return self.number ** 2
-    def print_square(self):
-        print(f"The square of {self.number} is {self.calculate_square()}")
+def play_game():
+    choices = ['rock', 'paper', 'scissors']
+    computer_choice = random.choice(choices)
+    user_choice = input("Enter your choice (rock/paper/scissors): ")
 
-# Instantiate the class
-num_square = NumberSquare(5)
+    print(f"Computer chose: {computer_choice}")
+    print(f"You chose: {user_choice}")
 
-# Do something with the instance
-num_square.print_square()
+    if user_choice == computer_choice:
+        print("It's a tie!")
+    elif user_choice == 'rock':
+        if computer_choice == 'paper':
+            print("Computer wins!")
+        else:
+            print("You win!")
+    elif user_choice == 'paper':
+        if computer_choice == 'scissors':
+            print("Computer wins!")
+        else:
+            print("You win!")
+    elif user_choice == 'scissors':
+        if computer_choice == 'rock':
+            print("Computer wins!")
+        else:
+            print("You win!")
+    else:
+        print("Invalid choice. Please try again.")
+
+play_game()
