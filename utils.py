@@ -6,6 +6,39 @@ import json
 class AST_parser:
     def __init__(self, repository_path):
         self.repository_path = repository_path
+    
+    def extract_code_blocks_from_file(self, file):
+        code_blocks = []
+        if file.endswith('.py'):
+            with open(file, 'r') as f:
+                content = f.read()
+                try:
+                    tree = ast.parse(content)
+                    for node in ast.walk(tree):
+                        if isinstance(node, (ast.FunctionDef, ast.ClassDef)):
+                            # Extracting functions and classes with their line numbers
+                            code_segment = ast.unparse(node)
+                            code_blocks.append({
+                                'file_path': file,
+                                'code_segment': code_segment,
+                                'start_line': node.lineno,
+                                'end_line': node.end_lineno if hasattr(node, 'end_lineno') else node.lineno,
+                                'type': type(node).__name__
+                            })
+                        elif isinstance(node, ast.Expr) and hasattr(node, 'lineno'):
+                            # Handling top-level expressions
+                            code_segment = ast.get_source_segment(
+                                content, node)
+                            code_blocks.append({
+                                'file_path': file,
+                                'code_segment': code_segment,
+                                'start_line': node.lineno,
+                                'end_line': node.end_lineno if hasattr(node, 'end_lineno') else node.lineno,
+                                'type': type(node).__name__
+                            })
+                except SyntaxError:
+                    print(f"Syntax Error in file: {file}")
+        return code_blocks
 
     def extract_code_blocks(self):
         code_blocks = []

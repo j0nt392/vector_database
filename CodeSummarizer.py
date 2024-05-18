@@ -25,7 +25,6 @@ class CodeSummarizer:
                 'content': prompt,
             },
             ])
-        warnings.warn("This is a deprecation warning.", FutureWarning)
         return response['message']['content']
     
     def process_directory(self, directory_path):

@@ -3,7 +3,7 @@ import numpy as np
 import pickle
 
 class VectorDatabase:
-    def __init__(self, storage_path='path_to_your_saved_index'):
+    def __init__(self, storage_path='database'):
         self.index_path = f"{storage_path}.index"
         self.metadata_path = f"{storage_path}.metadata"
         self.load_index()
@@ -20,7 +20,7 @@ class VectorDatabase:
         """Search for the k nearest neighbors of the query_embedding."""
         try:
             D, I = self.index.search(np.array([query_embedding], dtype='float32'), k)
-            print(I[0])
+            print(f"indexes: {I[0]}")
             return [(i, self.metadata[i]) for i in I[0]]  # Return indices and metadata
         except Exception as e:
             print(f"Search error: {e}")

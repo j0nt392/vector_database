@@ -6,6 +6,7 @@ import os
 from Plotting import Plotting
 from VectorDatabase import VectorDatabase
 from CodeSummarizer import CodeSummarizer
+from SearchReview import SearchReview
 from Embeddings import Embeddings
 from utils import AST_parser
 from CodeReview import CodeReview
@@ -23,10 +24,11 @@ class CLI:
     def __init__(self):
         self.parser = self.setup_parser()
         self.args = self.parser.parse_args()
-        self.db = VectorDatabase(storage_path='path_to_your_saved_index')  # Modify as needed
+        self.db = VectorDatabase(storage_path='database') 
         self.embeddings = Embeddings(client)
         self.summarizer = CodeSummarizer(client)
         self.code_reviewer = CodeReview(client)
+        self.search_review = SearchReview(client)
         self.Repo = git.Repo('/Users/jonte/kodprojekt/gunnar')
 
         self.route_command()
@@ -48,6 +50,7 @@ class CLI:
             self.parser.print_help()
 
     @log_errors
+    @measure_time
     def query_vdb(self):
         if not self.args.query:
             print("Error: --query parameter is required for 'query_vdb'")
@@ -57,6 +60,8 @@ class CLI:
         print(query_embedding)
         query_embedding = query_embedding.squeeze()
         results = self.db.search(query_embedding)
+        result_to_review = []
+        # Review the search results
         print("Search results:")
         for idx, result in results:
             print(f"\nResult {idx}:")
@@ -65,7 +70,10 @@ class CLI:
             print(f"Type: {result['type']}\n")
             print(f"Code Segment:\n {result['code_segment']}")
             print('-----------------------------------------')
-        raise ValueError("This is a test error")
+            result_to_review.append(result['code_segment'])
+        search_review = self.search_review.Review_Results(results, self.args.query)
+        print(search_review[1]['code_segment'])
+        return results
 
     @measure_time
     def get_summary(self):
@@ -92,7 +100,6 @@ class CLI:
         for i, block in enumerate(code_blocks):
             print(f"Processing block {i+1}/{len(code_blocks)}...")
             embedding = self.embeddings.create_code_embedding(block['code_segment'])
-            print(embedding.shape)
             embedding = embedding.squeeze() 
             self.db.add_embedding(embedding, block)
 
@@ -107,15 +114,16 @@ class CLI:
             print(f"Error: The file {self.args.file} does not exist.")
             return
         
-        code = self.code_reviewer.get_code(self.args.file)
+        code_extractor = AST_parser(self.args.dir)
+        code_blocks = code_extractor.extract_code_blocks_from_file(self.args.file)
+        #code = self.code_reviewer.get_code(self.args.file)
         optimization_type= input("What modification type do you want to suggest?")
-        review = self.code_reviewer.get_code_suggestion(code, optimization_type)
+        review = self.code_reviewer.get_code_suggestion(code_blocks, optimization_type)
         print(review)
         user_response = input("Implement suggested changes? y/n:")
         if user_response.lower() == 'y':
             print("implementing changes...")
-            new_code = self.code_reviewer.implement_changes(code, review)
-            print(new_code)
+            new_code = self.code_reviewer.implement_changes(code_blocks, review)
             with open(self.args.file, 'w') as f:
                 f.write(new_code)
             print("Changes implemented successfully.")
