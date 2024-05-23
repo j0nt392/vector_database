@@ -72,7 +72,7 @@ class CLI:
             print('-----------------------------------------')
             result_to_review.append(result['code_segment'])
         search_review = self.search_review.Review_Results(results, self.args.query)
-        print(search_review[1]['code_segment'])
+        print(search_review)
         return results
 
     @measure_time
